@@ -9,6 +9,8 @@ import { TwoFAComponent } from './two-fa/two-fa.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NotificationComponent } from './notification/notification.component';
+import { EnrollmentComponent } from './enrollment/enrollment.component';
+import { ThesisComponent } from './thesis/thesis.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { NotificationComponent } from './notification/notification.component';
     LoginComponent,
     TwoFAComponent,
     UserInfoComponent,
-    NotificationComponent
+    NotificationComponent,
+    EnrollmentComponent,
+    ThesisComponent
   ],
   imports: [
     BrowserModule,
