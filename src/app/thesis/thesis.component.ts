@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./thesis.component.css']
 })
 export class ThesisComponent {
-
+  advisorOption = [{
+    code: 'aa',
+    description: 'นาย ปป ปปปป'
+  }]
 }
