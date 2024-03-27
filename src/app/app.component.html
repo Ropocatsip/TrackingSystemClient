@@ -1,1 +1,87 @@
-<router-outlet></router-outlet>
+<div>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href=""> 
+                <!-- <fa-icon [icon]="faInfo"></fa-icon> -->
+                <div class="sidebar-brand-text mx-3">Nudthaya</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <fa-icon class="icon" [icon]="faNoti"></fa-icon>
+                    <span>Notification</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <fa-icon class="icon" [icon]="faInfo"></fa-icon>
+                    <span>Information</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <fa-icon class="icon" [icon]="faEnrollment"></fa-icon>
+                    <span>Enrollment</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <fa-icon class="icon" [icon]="faThesis"></fa-icon>
+                    <span>Thesis & Advisor</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <fa-icon class="icon" [icon]="faDashboard"></fa-icon>
+                    <span>Dashboard</span></a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <fa-icon class="icon" [icon]="faLogOut"></fa-icon>
+                    <span>Logout</span></a>
+            </li>
+            
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+                <router-outlet></router-outlet>
+            </div>
+            <!-- End of Main Content -->
+    
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Pistachio 2024</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+    
+        </div>
+        <!-- End of Content Wrapper -->
+        
+    </div>
+    <!-- End of Page Wrapper -->
+</div>
