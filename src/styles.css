@@ -10041,6 +10041,10 @@
     align-items: center;
     justify-content: center;
   }
+
+  .icon {
+    padding-right: 10px;
+  }
   
   .border-left-primary {
     border-left: 0.25rem solid #4e73df !important;

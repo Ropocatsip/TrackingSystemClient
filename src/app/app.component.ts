@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faBookBookmark, faChartLine, faCircleExclamation, faGraduationCap, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'client';
+  faXmark = faXmark;
+  faInfo = faUser;
+  faNoti = faCircleExclamation;
+  faEnrollment = faGraduationCap;
+  faThesis = faBookBookmark;
+  faDashboard = faChartLine;
 }

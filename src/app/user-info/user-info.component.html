@@ -1,1 +1,72 @@
-<p>user-info works!</p>
+<div>   
+    <!-- Topbar -->
+    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+        <!-- Sidebar Toggle (Topbar) -->
+        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Topbar Search -->
+        <form
+            class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                    aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </nav>
+    <!-- End of Topbar -->
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Notification</h1>
+        </div>
+
+        <!-- Content Row -->
+
+        <div class="row">
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-7">
+                <div class="card shadow mb-4">
+                    <div
+                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Info</h6>
+                        <fa-icon class="close" [icon]="faXmark"></fa-icon>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        ยินดีต้อนรับสู้รั้วมหาวิทยาลัย
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-7">
+                <div class="card shadow mb-4">
+                    <div
+                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-danger">Alert</h6>
+                        <fa-icon class="close" [icon]="faXmark"></fa-icon>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        อาจารย์รับคุณเป็นที่ปรึกษาแล้ว
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+
+</div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRightFromBracket, faBookBookmark, faChartLine, faCircleExclamation, faGraduationCap, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,5 +8,11 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 })
 export class DashboardComponent {
   faXmark = faXmark;
+  faInfo = faUser;
+  faNoti = faCircleExclamation;
+  faEnrollment = faGraduationCap;
+  faThesis = faBookBookmark;
+  faDashboard = faChartLine;
+  faLogOut = faArrowRightFromBracket;
 
 }
