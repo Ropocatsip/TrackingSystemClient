@@ -6,8 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./send-notification.component.css']
 })
 export class SendNotificationComponent {
-  advisorOption = [{
-    code: 'aa',
-    description: 'นาย ปป ปปปป'
+
+  notificationType = [{
+    code: 'info',
+    description: 'Information'
+  },{
+    code: 'alert',
+    description: 'Alert'
+  }]
+
+  receiverOption = [{
+    code: 'student',
+    description: 'นิสิต'
+  },{
+    code: 'advisor',
+    description: 'อาจารย์'
+  },{
+    code: 'committee',
+    description: 'Committee'
+  },{
+    code: 'all',
+    description: 'ทุกคน'
   }]
 }
