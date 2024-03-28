@@ -13,6 +13,11 @@ import { EnrollmentComponent } from './enrollment/enrollment.component';
 import { ThesisComponent } from './thesis/thesis.component';
 import { SlideBarComponent } from './components/slide-bar/slide-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AdvisoryComponent } from './advisory/advisory.component';
+import { ThesisCatalogComponent } from './thesis-catalog/thesis-catalog.component';
+import { ReportComponent } from './report/report.component';
+import { SendNotificationComponent } from './send-notification/send-notification.component';
+import { CourseSettingComponent } from './course-setting/course-setting.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,12 @@ import { FooterComponent } from './components/footer/footer.component';
     EnrollmentComponent,
     ThesisComponent,
     SlideBarComponent,
-    FooterComponent
+    FooterComponent,
+    AdvisoryComponent,
+    ThesisCatalogComponent,
+    ReportComponent,
+    SendNotificationComponent,
+    CourseSettingComponent
   ],
   imports: [
     BrowserModule,

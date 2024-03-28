@@ -6,6 +6,11 @@ import { UserInfoComponent } from './user-info/user-info.component';
 import { LoginComponent } from './login/login.component';
 import { ThesisComponent } from './thesis/thesis.component';
 import { EnrollmentComponent } from './enrollment/enrollment.component';
+import { AdvisoryComponent } from './advisory/advisory.component';
+import { ThesisCatalogComponent } from './thesis-catalog/thesis-catalog.component';
+import { ReportComponent } from './report/report.component';
+import { SendNotificationComponent } from './send-notification/send-notification.component';
+import { CourseSettingComponent } from './course-setting/course-setting.component';
 
 const routes: Routes = [
   {
@@ -31,6 +36,26 @@ const routes: Routes = [
   {
     path: 'enrollment',
     component: EnrollmentComponent
+  },
+  {
+    path: 'advisory',
+    component: AdvisoryComponent
+  },
+  {
+    path: 'thesis-catalog',
+    component: ThesisCatalogComponent
+  },
+  {
+    path: 'report',
+    component: ReportComponent
+  },
+  {
+    path: 'send-notification',
+    component: SendNotificationComponent
+  },
+  {
+    path: 'course-setting',
+    component: CourseSettingComponent
   }
 ];
 
