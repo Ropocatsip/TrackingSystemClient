@@ -11,6 +11,8 @@ import { ThesisCatalogComponent } from './thesis-catalog/thesis-catalog.componen
 import { ReportComponent } from './report/report.component';
 import { SendNotificationComponent } from './send-notification/send-notification.component';
 import { CourseSettingComponent } from './course-setting/course-setting.component';
+import { CourseDetailComponent } from './course-detail/course-detail.component';
+import { SubjectAddingComponent } from './subject-adding/subject-adding.component';
 
 const routes: Routes = [
   {
@@ -56,6 +58,14 @@ const routes: Routes = [
   {
     path: 'course-setting',
     component: CourseSettingComponent
+  },
+  {
+    path: 'course-detail',
+    component: CourseDetailComponent
+  },
+  {
+    path: 'subject',
+    component: SubjectAddingComponent
   }
 ];
 
