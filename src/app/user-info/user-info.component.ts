@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faBookBookmark, faChartLine, faCircleExclamation, faGraduationCap, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
-import { GetInfomationService } from '../service/get-infomation.service';
+import { InfomationService } from '../service/infomation.service';
 import { Student } from '../models/student';
 
 @Component({
@@ -18,12 +18,12 @@ export class UserInfoComponent implements OnInit{
 
   userInfo = {} as Student;
   constructor(
-    private getInformationService: GetInfomationService
+    private informationService: InfomationService
   )
   {}
 
   ngOnInit(): void {
-    this.getInformationService.getInformation("student").subscribe( s => {
+    this.informationService.getInformation("student").subscribe( s => {
       this.userInfo = s;
     })
   }

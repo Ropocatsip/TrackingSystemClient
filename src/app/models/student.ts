@@ -1,6 +1,6 @@
-import { StudentStatus } from "./StudentStatus";
+import { StudentStatus } from "./student-status";
 import { Course } from "./course";
-import { UserInfo } from "./userInfo";
+import { UserInfo } from "./user-info";
 
 export class Student {
     objectId : string = "";
