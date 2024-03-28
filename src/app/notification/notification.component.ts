@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faBookBookmark, faChartLine, faCircleExclamation, faGraduationCap, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBookBookmark, faChartLine, faCircleExclamation, faExchange, faGraduationCap, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-notification',
@@ -13,4 +13,5 @@ export class NotificationComponent {
   faEnrollment = faGraduationCap;
   faThesis = faBookBookmark;
   faDashboard = faChartLine;
+  faLogOut = faExchange;
 }

@@ -1,54 +1,62 @@
 <div>   
-    <!-- Begin Page Content -->
-    <div class="mt-4 container-fluid">
-
-        <!-- Page Heading -->
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Notification</h1>
-        </div>
-
-        <!-- Content Row -->
-
-        <div class="row">
-            <!-- Area Chart -->
-            <div class="col-xl-12 col-lg-7">
-                <div class="card shadow mb-4">
-                    <div
-                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Info</h6>
-                        <div class="d-flex flex-row">
-                            <div class="mr-4">23/03/2024</div>
-                            <fa-icon class="close" [icon]="faXmark"></fa-icon>
+    <div>
+        <div id="wrapper">
+            <app-slide-bar></app-slide-bar>
+            <div id="content-wrapper" class="d-flex flex-column">
+                <div id="content">
+                    <div class="mt-4 container-fluid">
+            
+                        <!-- Page Heading -->
+                        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                            <h1 class="h3 mb-0 text-gray-800">Notification</h1>
+                        </div>
+                
+                        <!-- Content Row -->
+                
+                        <div class="row">
+                            <!-- Area Chart -->
+                            <div class="col-xl-12 col-lg-7">
+                                <div class="card shadow mb-4">
+                                    <div
+                                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-primary">Info</h6>
+                                        <div class="d-flex flex-row">
+                                            <div class="mr-4">23/03/2024</div>
+                                            <fa-icon class="close" [icon]="faXmark"></fa-icon>
+                                        </div>
+                                    </div>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        ยินดีต้อนรับสู้รั้วมหาวิทยาลัย
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <!-- Area Chart -->
+                            <div class="col-xl-12 col-lg-7">
+                                <div class="card shadow mb-4">
+                                    <div
+                                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-danger">Alert</h6>
+                                        <div class="d-flex flex-row">
+                                            <div class="mr-4">23/03/2024</div>
+                                            <fa-icon class="close" [icon]="faXmark"></fa-icon>
+                                        </div>
+                                    </div>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        อาจารย์  xx xx รับคุณเป็นที่ปรึกษาแล้ว
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        ยินดีต้อนรับสู้รั้วมหาวิทยาลัย
-                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Area Chart -->
-            <div class="col-xl-12 col-lg-7">
-                <div class="card shadow mb-4">
-                    <div
-                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-danger">Alert</h6>
-                        <div class="d-flex flex-row">
-                            <div class="mr-4">23/03/2024</div>
-                            <fa-icon class="close" [icon]="faXmark"></fa-icon>
-                        </div>
-                    </div>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        อาจารย์  xx xx รับคุณเป็นที่ปรึกษาแล้ว
-                    </div>
-                </div>
+                <app-footer></app-footer>
             </div>
         </div>
     </div>
-    <!-- /.container-fluid -->
-
+    
 </div>

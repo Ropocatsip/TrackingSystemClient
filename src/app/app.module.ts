@@ -11,6 +11,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NotificationComponent } from './notification/notification.component';
 import { EnrollmentComponent } from './enrollment/enrollment.component';
 import { ThesisComponent } from './thesis/thesis.component';
+import { SlideBarComponent } from './components/slide-bar/slide-bar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ThesisComponent } from './thesis/thesis.component';
     UserInfoComponent,
     NotificationComponent,
     EnrollmentComponent,
-    ThesisComponent
+    ThesisComponent,
+    SlideBarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
