@@ -45,28 +45,30 @@
                                             {{userInfo.email}}
                                         </div>
                                     </div>
-                                    <div class="row mb-4">
-                                        <div class="col-xl-3">
-                                            รหัสนิสิต
+                                    <div *ngIf="student.status.desc">
+                                        <div class="row mb-4">
+                                            <div class="col-xl-3">
+                                                รหัสนิสิต
+                                            </div>
+                                            <div class="col-xl-9">
+                                                {{student.studentId}}
+                                            </div>
                                         </div>
-                                        <div class="col-xl-9">
-                                            {{userInfo.studentId}}
+                                        <div class="row mb-4">
+                                            <div class="col-xl-3">
+                                                GPAX
+                                            </div>
+                                            <div class="col-xl-9">
+                                                {{student.gpax}}
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-4">
-                                        <div class="col-xl-3">
-                                            GPAX
-                                        </div>
-                                        <div class="col-xl-9">
-                                            {{userInfo.gpax}}
-                                        </div>
-                                    </div>
-                                    <div class="row mb-4">
-                                        <div class="col-xl-3">
-                                            สถานะ
-                                        </div>
-                                        <div class="col-xl-9">
-                                            {{userInfo.status.desc}}
+                                        <div class="row mb-4">
+                                            <div class="col-xl-3">
+                                                สถานะ
+                                            </div>
+                                            <div class="col-xl-9">
+                                                {{student.status.desc}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
