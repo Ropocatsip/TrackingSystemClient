@@ -3,6 +3,7 @@ import { faBookBookmark, faChartLine, faCircleExclamation, faGraduationCap, faUs
 import { InfomationService } from '../service/infomation.service';
 import { Student } from '../models/student';
 import { UserInfo } from '../models/user-info';
+import { StudentService } from '../service/student.service';
 
 @Component({
   selector: 'app-user-info',
@@ -19,19 +20,22 @@ export class UserInfoComponent implements OnInit{
 
   userInfo = {} as UserInfo;
   student = {} as Student;
-  state = "student";
+  userName = "student";
   constructor(
-    private informationService: InfomationService
+    private informationService: InfomationService,
+    private studentService: StudentService
   )
   {}
 
   ngOnInit(): void {
-    this.informationService.getInformation(this.state).subscribe( s => {
+    this.informationService.getInformation(this.userName).subscribe( s => {
       this.userInfo = s;
     });
 
-    if (this.state = "student") {
-
+    if (this.userName = "student") {
+      this.studentService.getStudentInfo(this.userName).subscribe( s => {
+        this.student = s
+      })
     }
   }
 }
