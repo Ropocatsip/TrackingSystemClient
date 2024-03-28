@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-two-fa',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./two-fa.component.css']
 })
 export class TwoFAComponent {
+  faSecurity = faLock;
 
 }

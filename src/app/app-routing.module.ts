@@ -13,6 +13,7 @@ import { SendNotificationComponent } from './send-notification/send-notification
 import { CourseSettingComponent } from './course-setting/course-setting.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { SubjectAddingComponent } from './subject-adding/subject-adding.component';
+import { TwoFAComponent } from './two-fa/two-fa.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'login/two-fa',
+    component: TwoFAComponent
   },
   {
     path: 'dashboard',
