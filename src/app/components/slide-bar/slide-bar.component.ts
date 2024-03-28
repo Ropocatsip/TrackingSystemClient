@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faArrowRightFromBracket, faBookBookmark, faChartLine, faCircleExclamation, faGraduationCap, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRightFromBracket, faBell, faBookBookmark, faChartColumn, faChartLine, faCircleExclamation, faCommentDots, faGraduationCap, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-slide-bar',
@@ -14,4 +14,7 @@ export class SlideBarComponent {
   faThesis = faBookBookmark;
   faDashboard = faChartLine;
   faLogOut = faArrowRightFromBracket;
+  faBell = faBell;
+  faReport = faChartColumn;
+  faSendNoti = faCommentDots;
 }

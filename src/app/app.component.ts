@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faArrowRightFromBracket, faBookBookmark, faChartLine, faCircleExclamation, faGraduationCap, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +7,4 @@ import { faArrowRightFromBracket, faBookBookmark, faChartLine, faCircleExclamati
 })
 export class AppComponent {
   title = 'Tracking System';
-  faXmark = faXmark;
-  faInfo = faUser;
-  faNoti = faCircleExclamation;
-  faEnrollment = faGraduationCap;
-  faThesis = faBookBookmark;
-  faDashboard = faChartLine;
-  faLogOut = faArrowRightFromBracket;
 }
