@@ -20,6 +20,7 @@ import { SendNotificationComponent } from './send-notification/send-notification
 import { CourseSettingComponent } from './course-setting/course-setting.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { SubjectAddingComponent } from './subject-adding/subject-adding.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { SubjectAddingComponent } from './subject-adding/subject-adding.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
