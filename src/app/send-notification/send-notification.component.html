@@ -3,7 +3,62 @@
         <app-slide-bar></app-slide-bar>
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
+                <div class="mt-4 container-fluid">
+
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Sending Notification</h1>
+                    </div>
                 
+                    <div class="row">
+                        <!-- Area Chart -->
+                        <div class="col-xl-12 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Advisor Information</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="row mb-4">
+                                        <div class="col-xl-3">
+                                            Notification Type
+                                        </div>
+                                        <div class="col-xl-9">
+                                            <select id="advisor-lists" class="form-control">
+                                                <option value="" disabled selected>--- โปรดเลือก ---</option>
+                                                <option *ngFor="let advisors of advisorOption" [value]="advisors.code">{{ advisors.description }}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4">
+                                        <div class="col-xl-3">
+                                            ส่งถึง
+                                        </div>
+                                        <div class="col-xl-9">
+                                            <select id="advisor-lists" class="form-control">
+                                                <option value="" disabled selected>--- โปรดเลือก ---</option>
+                                                <option *ngFor="let advisors of advisorOption" [value]="advisors.code">{{ advisors.description }}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4">
+                                        <div class="col-xl-3">
+                                            ข้อความ
+                                        </div>
+                                        <div class="col-xl-9">
+                                            <textarea id="thesis-topic" class="form-control" type="text" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <a href="#" class="btn btn-success btn-icon-split">
+                                            <span class="text">ส่งข้อความ</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <app-footer></app-footer>
         </div>
