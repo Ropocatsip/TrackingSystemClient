@@ -1,4 +1,4 @@
 export class StudentStatus {
-    userName : string = "";
-    password : string = "";
+    statusId : number = 0;
+    desc : string = "";
 }

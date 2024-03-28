@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faBookBookmark, faChartLine, faCircleExclamation, faGraduationCap, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { GetInfomationService } from '../service/get-infomation.service';
+import { Student } from '../models/student';
 
 @Component({
   selector: 'app-user-info',
@@ -15,6 +16,7 @@ export class UserInfoComponent implements OnInit{
   faThesis = faBookBookmark;
   faDashboard = faChartLine;
 
+  userInfo = {} as Student;
   constructor(
     private getInformationService: GetInfomationService
   )
@@ -22,7 +24,7 @@ export class UserInfoComponent implements OnInit{
 
   ngOnInit(): void {
     this.getInformationService.getInformation("student").subscribe( s => {
-      console.log(s);
+      this.userInfo = s;
     })
   }
 }

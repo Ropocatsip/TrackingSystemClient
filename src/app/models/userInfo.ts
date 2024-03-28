@@ -1,4 +1,4 @@
 export class UserInfo {
-    courseId : string = "";
-    desc : string = "";
+    userName : string = "";
+    password : string = "";
 }

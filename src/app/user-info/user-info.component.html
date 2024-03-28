@@ -20,13 +20,13 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Personal Information</h6>
                                 </div>
                                 <!-- Card Body -->
-                                <div class="card-body">
+                                <div *ngIf="userInfo.name" class="card-body">
                                     <div class="row mb-4">
                                         <div class="col-xl-3">
                                             ชื่อ
                                         </div>
                                         <div class="col-xl-9">
-                                            Nudthaya
+                                            {{userInfo.name}}
                                         </div>
                                     </div>
                                     <div class="row mb-4">
@@ -34,7 +34,7 @@
                                             นามสกุล
                                         </div>
                                         <div class="col-xl-9">
-                                            Khemcharoen
+                                            {{userInfo.lastName}}
                                         </div>
                                     </div>
                                     <div class="row mb-4">
@@ -42,7 +42,7 @@
                                             Email
                                         </div>
                                         <div class="col-xl-9">
-                                            nudthaya&#64;chula.com
+                                            {{userInfo.email}}
                                         </div>
                                     </div>
                                     <div class="row mb-4">
@@ -50,7 +50,7 @@
                                             รหัสนิสิต
                                         </div>
                                         <div class="col-xl-9">
-                                            667
+                                            {{userInfo.studentId}}
                                         </div>
                                     </div>
                                     <div class="row mb-4">
@@ -58,7 +58,7 @@
                                             GPAX
                                         </div>
                                         <div class="col-xl-9">
-                                            4.00
+                                            {{userInfo.gpax}}
                                         </div>
                                     </div>
                                     <div class="row mb-4">
@@ -66,7 +66,7 @@
                                             สถานะ
                                         </div>
                                         <div class="col-xl-9">
-                                            กำลังศึกษา
+                                            {{userInfo.status.desc}}
                                         </div>
                                     </div>
                                 </div>
