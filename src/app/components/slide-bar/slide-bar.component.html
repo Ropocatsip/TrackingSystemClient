@@ -1,11 +1,11 @@
 <!-- Sidebar -->
-<div>
+<div *ngIf="userInfo.name">
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
     
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href=""> 
             <!-- <fa-icon [icon]="faInfo"></fa-icon> -->
-            <div class="sidebar-brand-text mx-3">Nudthaya</div>
+            <div class="sidebar-brand-text mx-3">{{userInfo.role}}</div>
         </a>
     
         <!-- Divider -->
@@ -27,49 +27,49 @@
                 <span>Information</span></a>
         </li>
     
-        <li class="nav-item active">
+        <li *ngIf="userInfo.role == 'student'" class="nav-item active">
             <a class="nav-link" routerLink="/enrollment">
                 <fa-icon class="icon" [icon]="faEnrollment"></fa-icon>
                 <span>Enrollment</span></a>
         </li>
     
-        <li class="nav-item active">
+        <li *ngIf="userInfo.role == 'student'" class="nav-item active">
             <a class="nav-link" routerLink="/thesis-advisor">
                 <fa-icon class="icon" [icon]="faThesis"></fa-icon>
                 <span>Thesis & Advisor</span></a>
         </li>
     
-        <li class="nav-item active">
+        <li *ngIf="userInfo.role == 'student'" class="nav-item active">
             <a class="nav-link" routerLink="/dashboard">
                 <fa-icon class="icon" [icon]="faDashboard"></fa-icon>
                 <span>Dashboard</span></a>
         </li>
 
-        <li class="nav-item active">
+        <li *ngIf="userInfo.role == 'advisor'" class="nav-item active">
             <a class="nav-link" routerLink="/advisory">
                 <fa-icon class="icon" [icon]="faBell"></fa-icon>
                 <span>Advisory Request</span></a>
         </li>
 
-        <li class="nav-item active">
+        <li *ngIf="userInfo.role == 'advisor'" class="nav-item active">
             <a class="nav-link" routerLink="/thesis-catalog">
                 <fa-icon class="icon" [icon]="faThesis"></fa-icon>
                 <span>Thesis Catalog</span></a>
         </li>
 
-        <li class="nav-item active">
+        <li *ngIf="userInfo.role == 'commitee'" class="nav-item active">
             <a class="nav-link" routerLink="/report">
                 <fa-icon class="icon" [icon]="faReport"></fa-icon>
                 <span>Report</span></a>
         </li>
 
-        <li class="nav-item active">
+        <li *ngIf="userInfo.role == 'admin'" class="nav-item active">
             <a class="nav-link" routerLink="/send-notification">
                 <fa-icon class="icon" [icon]="faSendNoti"></fa-icon>
                 <span>Sending Notification</span></a>
         </li>
 
-        <li class="nav-item active">
+        <li *ngIf="userInfo.role == 'admin'" class="nav-item active">
             <a class="nav-link" routerLink="/course-setting">
                 <fa-icon class="icon" [icon]="faEnrollment"></fa-icon>
                 <span>Course Setting</span></a>

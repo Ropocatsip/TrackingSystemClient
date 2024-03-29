@@ -18,8 +18,6 @@ export class EnrollmentComponent implements OnInit{
   ngOnInit(): void {
     this.studentService.getStudentInfo("student").subscribe(s => {
       this.studentInfo = s
-      console.log(s);
-      
     });
   }
 
