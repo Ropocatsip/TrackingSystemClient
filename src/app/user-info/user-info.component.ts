@@ -35,7 +35,7 @@ export class UserInfoComponent implements OnInit{
     if (this.userName == "student") {
       this.studentService.getStudentInfo(this.userName).subscribe( s => {
         this.student = s
-      })
+      });
     }
   }
 }

@@ -1,6 +1,7 @@
 import { StudentStatus } from "./student-status";
 import { Course } from "./course";
 import { UserInfo } from "./user-info";
+import { Thesis } from "./thesis";
 
 export class Student {
     objectId : string = "";
@@ -12,4 +13,5 @@ export class Student {
     gpax : number = 0;
     status = {} as StudentStatus;
     userInfo = {} as UserInfo;
+    thesis = {} as Thesis;
 }

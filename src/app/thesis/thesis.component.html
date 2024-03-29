@@ -48,7 +48,7 @@
                         </div>
                 
                         <!-- Area Chart -->
-                        <div class="col-xl-12 col-lg-7">
+                        <div *ngIf="student.thesis" class="col-xl-12 col-lg-7">
                             <div class="card shadow mb-4">
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -61,7 +61,27 @@
                                             สถานะ
                                         </div>
                                         <div class="col-xl-9">
-                                            ยังไม่มีอาจารย์ที่ปรึกษา
+                                            {{student.thesis.status.desc}}
+                                        </div>
+                                    </div>
+
+                                    <div *ngIf="student.thesis.status.statusId != 1">
+                                        <div class="row mb-4">
+                                            <div class="col-xl-3">
+                                                หัวข้อ
+                                            </div>
+                                            <div class="col-xl-9">
+                                                {{student.thesis.topic}}
+                                            </div>
+                                        </div>
+    
+                                        <div class="row mb-4">
+                                            <div class="col-xl-3">
+                                                อาจารย์ที่ปรึกษา
+                                            </div>
+                                            <div class="col-xl-9">
+                                                {{student.thesis.advisor.fullName}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
