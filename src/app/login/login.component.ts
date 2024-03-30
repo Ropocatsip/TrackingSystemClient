@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { InfomationService } from '../service/infomation.service';
 import { Router } from '@angular/router';
+import { LocalStorageService } from '../service/local-storage.service';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit{
 
   constructor(
     private informationService: InfomationService,
-    private router : Router
+    private router : Router,
+    private localStorageService: LocalStorageService
   ) {}
 
   ngOnInit(): void {
@@ -22,20 +24,16 @@ export class LoginComponent implements OnInit{
   }
 
   onClickLogin() {
-    console.log(this.userName);
-    
     this.informationService.getLoginResponse(this.userName, this.password).subscribe({
       next: () => {},
       error: (er) => {
-        console.log(er);
-        
         alert(er.error);
       },
       complete: () => {
+        this.localStorageService.setItem('userName', this.userName);
         this.router.navigate(['/login/two-fa']);
       }
     });
-
   }
 
   
