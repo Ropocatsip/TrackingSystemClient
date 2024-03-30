@@ -14,4 +14,8 @@ export class InfomationService {
   getInformation(userName: string): Observable<UserInfo> {
     return this.http.get<UserInfo>(`http://localhost:5043/Information/${userName}`);
   }
+
+  getLoginResponse(userName: string, password: string): Observable<UserInfo> {
+    return this.http.get<UserInfo>(`http://localhost:5043/Information/${userName}/${password}`);
+  }
 }

@@ -15,14 +15,14 @@
                             <form class="user">
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user"
-                                        id="exampleInputEmail" aria-describedby="emailHelp"
-                                        placeholder="Enter Email Address...">
+                                        id="exampleInputEmail"
+                                        placeholder="Enter User Name ..." [(ngModel)]="userName" name="userNAme">
                                 </div>
                                 <div class="form-group">
                                     <input type="password" class="form-control form-control-user"
-                                        id="exampleInputPassword" placeholder="Password">
+                                        id="exampleInputPassword" placeholder="Password" [(ngModel)]="password" name="password">
                                 </div>
-                                <a routerLink="/login/two-fa" class="btn btn-primary btn-user btn-block">
+                                <a class="btn btn-primary btn-user btn-block" (click)="onClickLogin()">
                                     Login
                                 </a>
                             </form>

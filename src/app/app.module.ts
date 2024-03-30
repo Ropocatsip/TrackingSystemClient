@@ -21,6 +21,7 @@ import { CourseSettingComponent } from './course-setting/course-setting.componen
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { SubjectAddingComponent } from './subject-adding/subject-adding.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
