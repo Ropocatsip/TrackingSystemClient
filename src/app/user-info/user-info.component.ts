@@ -4,6 +4,7 @@ import { InfomationService } from '../service/infomation.service';
 import { Student } from '../models/student';
 import { UserInfo } from '../models/user-info';
 import { StudentService } from '../service/student.service';
+import { LocalStorageService } from '../service/local-storage.service';
 
 @Component({
   selector: 'app-user-info',
@@ -20,22 +21,25 @@ export class UserInfoComponent implements OnInit{
 
   userInfo = {} as UserInfo;
   student = {} as Student;
-  userName = "student";
   constructor(
     private informationService: InfomationService,
-    private studentService: StudentService
+    private studentService: StudentService,
+    private localStorageService: LocalStorageService
   )
   {}
 
   ngOnInit(): void {
-    this.informationService.getInformation(this.userName).subscribe( s => {
-      this.userInfo = s;
-    });
-
-    if (this.userName == "student") {
-      this.studentService.getStudentInfo(this.userName).subscribe( s => {
-        this.student = s
+    const userName = this.localStorageService.getItem('userName');
+    if (userName) {
+      this.informationService.getInformation(userName).subscribe( s => {
+        this.userInfo = s;
+        if (this.userInfo.role == "student") {
+          this.studentService.getStudentInfo(userName).subscribe( s => {
+            this.student = s
+          });
+        }
       });
     }
   }
+
 }

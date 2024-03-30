@@ -8,5 +8,6 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
 })
 export class TwoFAComponent {
   faSecurity = faLock;
+  authen = (Math.random() * 90 + 10).toFixed(0);
 
 }
