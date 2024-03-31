@@ -1,5 +1,4 @@
-import { Subject } from "./Subject";
-
+import { Subject } from "./subject";
 export class Course {
     courseId : string = "";
     desc : string = "";
