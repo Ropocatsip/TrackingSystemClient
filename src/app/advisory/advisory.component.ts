@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalStorageService } from '../service/local-storage.service';
 import { AdvisorService } from '../service/advisor.service';
-import { Advisor } from '../models/advisor';
+import { AdvisoryRequest } from '../models/advisory-request';
 
 @Component({
   selector: 'app-advisory',
@@ -10,7 +10,7 @@ import { Advisor } from '../models/advisor';
 })
 export class AdvisoryComponent implements OnInit {
 
-  advisor = {} as Advisor;
+  advisories = [] as AdvisoryRequest[];
 
   constructor(
     private localStorageService: LocalStorageService,
@@ -21,7 +21,11 @@ export class AdvisoryComponent implements OnInit {
     const userName = this.localStorageService.getItem('userName');
     if (userName) { 
       this.advisorService.getAdvisor(userName).subscribe( s => {
-        this.advisor = s;
+        for(const request of s.advisoryRequest) {
+          if (request.thesisStatus.statusId == 1) {
+            this.advisories.push(request);
+          }
+        }
       });
     }
   }

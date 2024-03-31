@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdvisorService } from '../service/advisor.service';
 import { LocalStorageService } from '../service/local-storage.service';
-import { Advisor } from '../models/advisor';
 import { AdvisoryRequest } from '../models/advisory-request';
 
 @Component({

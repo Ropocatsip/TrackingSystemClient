@@ -9,8 +9,8 @@
                         <h1 class="h3 mb-0 text-gray-800">Advisory Request</h1>
                     </div>
                 
-                    <div class="row">
-                        <div *ngFor="let advisory of advisor.advisoryRequest; index as i" class="col-xl-12 col-lg-7">
+                    <div *ngIf="advisories" class="row">
+                        <div *ngFor="let advisory of advisories; index as i" class="col-xl-12 col-lg-7">
                             <div class="card shadow mb-4">
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
