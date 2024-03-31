@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../service/student.service';
 import { Student } from '../models/student';
+import { LocalStorageService } from '../service/local-storage.service';
 
 @Component({
   selector: 'app-thesis',
@@ -16,12 +17,16 @@ export class ThesisComponent implements OnInit {
   student = {} as Student;
 
   constructor(
-    private studentService: StudentService
+    private studentService: StudentService,
+    private localStorageService: LocalStorageService
   ) {}
 
   ngOnInit(): void {
-    this.studentService.getStudentInfo("student").subscribe( s => {
-      this.student = s
-    })
+    const userName = this.localStorageService.getItem('userName');
+    if(userName) {
+      this.studentService.getStudentInfo(userName).subscribe( s => {
+        this.student = s
+      });
+    }
   }
 }

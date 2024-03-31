@@ -1,5 +1,6 @@
 export class UserInfo {
     objectId : string = "";
+    title : string = "";
     name : string = "";
     lastName : string = "";
     email : string = "";

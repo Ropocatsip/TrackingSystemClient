@@ -1,17 +1,17 @@
 export class Thesis {
-    status = {} as Status;
+    status = {} as ThesisStatus;
     topic : string = "";
-    advisor = {} as Advisor;
+    advisorInfo = {} as AdvisorInfo;
 }
 
-export class Status 
+export class ThesisStatus 
 {
     statusId : number = 0;
     desc : string = "";
 }
 
-export class Advisor
+export class AdvisorInfo
 {
-    advisorId : string = "";
+    advisorId : number = 0;
     fullName : string = "";
 }
