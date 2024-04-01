@@ -65,7 +65,7 @@ const routes: Routes = [
     component: CourseSettingComponent
   },
   {
-    path: 'course-detail',
+    path: 'course-detail/:courseId',
     component: CourseDetailComponent
   },
   {
