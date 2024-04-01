@@ -11,11 +11,11 @@
                 
                     <!-- Content Row -->
                 
-                    <div class="card shadow mb-4">
+                    <div *ngIf="course" class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">หลักสูตร SE แผน ข</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">{{course.desc}}</h6>
                         </div>
-                        <div *ngIf="course" class="card-body">
+                        <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
@@ -31,7 +31,7 @@
                                             <td>{{subject.subjectId}}</td>
                                             <td>{{subject.name}}</td>
                                             <td>{{subject.schedule}}</td>
-                                            <td class="text-center"><a href="#" class="btn btn-danger btn-icon-split">
+                                            <td class="text-center"><a class="btn btn-danger btn-icon-split" (click)="onClickDelete(subject.subjectId)">
                                                 <span class="text">ลบ</span>
                                             </a></td>
                                         </tr>

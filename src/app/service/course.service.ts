@@ -17,4 +17,8 @@ export class CourseService {
   getCourseById(courseId : string): Observable<Course> {
     return this.http.get<Course>(`http://localhost:5043/Course/${courseId}`);
   }
+
+  updateCourseById(courseId : string, subjectId: number): Observable<any> {
+    return this.http.put<any>(`http://localhost:5043/Course/${courseId}/${subjectId}`, {});
+  }
 }

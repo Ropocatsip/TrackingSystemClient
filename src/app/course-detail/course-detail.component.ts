@@ -25,19 +25,33 @@ export class CourseDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.courseService.getCourseById(this.courseId).subscribe(s => {
-      this.course = s
-    });
+    this.getCourseById();
   }
 
   onClickAddSubject() {
     this.modalRef = this.modalService.show(ModalComponent);
     this.modalRef.content.action.subscribe((isConfirm: boolean) => {
       if (isConfirm) {
-        this.courseService.getCourseById(this.courseId).subscribe(s => {
-          this.course = s
-        });
+        this.getCourseById();
       }
+    });
+  }
+
+  onClickDelete(subjectId: number) {
+    this.courseService.updateCourseById(this.course.courseId, subjectId).subscribe({
+      next: () => {},
+      error: (er) => {
+        alert(er.error);
+      },
+      complete: () => {
+        this.getCourseById();
+      }
+    });
+  }
+
+  getCourseById() {
+    this.courseService.getCourseById(this.courseId).subscribe(s => {
+      this.course = s
     });
   }
 
