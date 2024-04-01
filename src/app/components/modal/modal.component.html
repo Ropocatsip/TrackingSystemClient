@@ -26,18 +26,13 @@
     <div class="modal-body">
         <div class="row mb-4">
             <div class="col-xl-3">
-                รหัสวิชา
-            </div>
-            <div class="col-xl-9">
-                <input id="thesis-topic" class="form-control" type="text">
-            </div>
-        </div>
-        <div class="row mb-4">
-            <div class="col-xl-3">
                 ชื่อวิชา
             </div>
             <div class="col-xl-9">
-                <input id="thesis-topic" class="form-control" type="text">
+                <select [(ngModel)]="subjectId" id="advisor-lists" class="form-control">
+                    <option value="0" disabled selected>--- โปรดเลือก ---</option>
+                    <option *ngFor="let subject of subjects" [value]="subject.subjectId">{{ subject.name }}</option>
+                </select>
             </div>
         </div>
         <div class="text-center mb-4">
@@ -48,7 +43,7 @@
                 ทุกวัน
             </div>
             <div class="col-xl-9">
-                <select id="advisor-lists" class="form-control">
+                <select [(ngModel)]="daySelected" id="advisor-lists" class="form-control">
                     <option value="" disabled selected>--- โปรดเลือก ---</option>
                     <option *ngFor="let day of dayOption" [value]="day">{{ day }}</option>
                 </select>
@@ -59,7 +54,7 @@
                 เวลา
             </div>
             <div class="col-xl-9">
-                <select id="advisor-lists" class="form-control">
+                <select [(ngModel)]="timeSelected" id="advisor-lists" class="form-control">
                     <option value="" disabled selected>--- โปรดเลือก ---</option>
                     <option *ngFor="let time of timeOption" [value]="time">{{ time }}</option>
                 </select>

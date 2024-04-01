@@ -4,6 +4,7 @@ import { Course } from '../models/course';
 import { ActivatedRoute } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ModalComponent } from '../components/modal/modal.component';
+import { Subject } from '../models/subject';
 
 @Component({
   selector: 'app-course-detail',
@@ -32,13 +33,23 @@ export class CourseDetailComponent implements OnInit {
     this.modalRef = this.modalService.show(ModalComponent);
     this.modalRef.content.action.subscribe((isConfirm: boolean) => {
       if (isConfirm) {
-        this.getCourseById();
+       this.modalRef.content.subject.subscribe((subject: Subject) => {
+         this.courseService.updateSubjectCourseById(this.courseId, subject).subscribe({
+           next: () => {},
+           error: (er) => {
+             alert(er.error);
+           },
+           complete: () => {
+             this.getCourseById();
+           }
+         });
+       });
       }
     });
   }
 
   onClickDelete(subjectId: number) {
-    this.courseService.updateCourseById(this.course.courseId, subjectId).subscribe({
+    this.courseService.deleteSubjectCourseById(this.course.courseId, subjectId).subscribe({
       next: () => {},
       error: (er) => {
         alert(er.error);
