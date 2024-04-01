@@ -32,6 +32,13 @@ export class CourseDetailComponent implements OnInit {
 
   onClickAddSubject() {
     this.modalRef = this.modalService.show(ModalComponent);
+    this.modalRef.content.action.subscribe((isConfirm: boolean) => {
+      if (isConfirm) {
+        this.courseService.getCourseById(this.courseId).subscribe(s => {
+          this.course = s
+        });
+      }
+    });
   }
 
 }

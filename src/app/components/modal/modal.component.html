@@ -18,14 +18,59 @@
     </div>
 </div> -->
 <div class="modal-header">
-    <h4 class="modal-title pull-left">Modal</h4>
+    <h4 class="modal-title pull-left">เพิ่มรายการวิชา</h4>
     <button type="button" class="close pull-right" aria-label="Close" (click)="cancel()">
        <span aria-hidden="true">×</span>
     </button>
     </div>
     <div class="modal-body">
-        This is a sample modal dialog box.
+        <div class="row mb-4">
+            <div class="col-xl-3">
+                รหัสวิชา
+            </div>
+            <div class="col-xl-9">
+                <input id="thesis-topic" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-xl-3">
+                ชื่อวิชา
+            </div>
+            <div class="col-xl-9">
+                <input id="thesis-topic" class="form-control" type="text">
+            </div>
+        </div>
+        <div class="text-center mb-4">
+            เวลาเรียน
+        </div>
+        <div class="row mb-4">
+            <div class="col-xl-3">
+                ทุกวัน
+            </div>
+            <div class="col-xl-9">
+                <select id="advisor-lists" class="form-control">
+                    <option value="" disabled selected>--- โปรดเลือก ---</option>
+                    <option *ngFor="let day of dayOption" [value]="day">{{ day }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-xl-3">
+                เวลา
+            </div>
+            <div class="col-xl-9">
+                <select id="advisor-lists" class="form-control">
+                    <option value="" disabled selected>--- โปรดเลือก ---</option>
+                    <option *ngFor="let time of timeOption" [value]="time">{{ time }}</option>
+                </select>
+            </div>
+        </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-default" (click)="cancel()">Close</button>
+        <a (click)="cancel()" class="btn btn-danger btn-icon-split">
+            <span class="text">ยกเลิก</span>
+        </a>
+        <a (click)="confirm()" class="btn btn-success btn-icon-split">
+            <span class="text">บันทึก</span>
+        </a>
  </div>
