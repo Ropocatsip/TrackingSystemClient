@@ -22,6 +22,9 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { SubjectAddingComponent } from './subject-adding/subject-adding.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ModalComponent } from './components/modal/modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -41,16 +44,19 @@ import { FormsModule } from '@angular/forms';
     SendNotificationComponent,
     CourseSettingComponent,
     CourseDetailComponent,
-    SubjectAddingComponent
+    SubjectAddingComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ModalModule
   ],
-  providers: [],
+  providers: [BsModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
