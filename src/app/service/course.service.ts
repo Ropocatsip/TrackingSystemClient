@@ -14,7 +14,7 @@ export class CourseService {
     return this.http.get<Course[]>(`http://localhost:5043/Course`);
   }
 
-  getCourseById(courseId : string): Observable<Course[]> {
-    return this.http.get<Course[]>(`http://localhost:5043/Course/${courseId}`);
+  getCourseById(courseId : string): Observable<Course> {
+    return this.http.get<Course>(`http://localhost:5043/Course/${courseId}`);
   }
 }
