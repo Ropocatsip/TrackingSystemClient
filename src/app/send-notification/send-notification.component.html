@@ -24,7 +24,7 @@
                                             Notification Type
                                         </div>
                                         <div class="col-xl-9">
-                                            <select id="advisor-lists" class="form-control">
+                                            <select [(ngModel)]="type" id="advisor-lists" class="form-control">
                                                 <option value="" disabled selected>--- โปรดเลือก ---</option>
                                                 <option *ngFor="let notification of notificationType" [value]="notification.code">{{ notification.description }}</option>
                                             </select>
@@ -35,7 +35,7 @@
                                             ส่งถึง
                                         </div>
                                         <div class="col-xl-9">
-                                            <select id="advisor-lists" class="form-control">
+                                            <select [(ngModel)]="receiver" id="advisor-lists" class="form-control">
                                                 <option value="" disabled selected>--- โปรดเลือก ---</option>
                                                 <option *ngFor="let receiver of receiverOption" [value]="receiver.code">{{ receiver.description }}</option>
                                             </select>
@@ -46,11 +46,11 @@
                                             ข้อความ
                                         </div>
                                         <div class="col-xl-9">
-                                            <textarea id="thesis-topic" class="form-control" type="text" rows="5"></textarea>
+                                            <textarea [(ngModel)]="detail" id="thesis-topic" class="form-control" type="text" rows="5"></textarea>
                                         </div>
                                     </div>
                                     <div class="row justify-content-center">
-                                        <a href="#" class="btn btn-success btn-icon-split">
+                                        <a (click)="onClickSendNotification()" class="btn btn-success btn-icon-split">
                                             <span class="text">ส่งข้อความ</span>
                                         </a>
                                     </div>

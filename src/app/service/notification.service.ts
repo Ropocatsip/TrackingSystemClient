@@ -14,7 +14,7 @@ export class NotificationService {
     return this.http.get<Notification[]>(`http://localhost:5043/Notification/${userName}`);
   }
 
-  sendNotification(receiver: string, notification: Notification): Observable<Notification[]> {
-    return this.http.post<Notification[]>(`http://localhost:5043/Notification/${receiver}`, notification);
+  sendNotification(receiver: string, notification: Notification): Observable<any> {
+    return this.http.post<any>(`http://localhost:5043/Notification/${receiver}`, notification);
   }
 }

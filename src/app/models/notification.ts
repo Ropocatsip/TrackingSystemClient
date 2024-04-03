@@ -2,6 +2,6 @@ export class Notification {
     userName: string = "";
     type: string = "";
     detail: string = "";
-    sendDate: string = "";
+    sendDate: Date = new Date();
     isClose: boolean = false;
 }

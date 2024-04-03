@@ -20,8 +20,7 @@
                                         class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                         <h6 class="m-0 font-weight-bold {{noti.type == 'Alert' ? 'text-danger' : 'text-primary'}}">{{noti.type}}</h6>
                                         <div class="d-flex flex-row">
-                                            <div class="mr-4">{{noti.sendDate}}</div>
-                                            <fa-icon class="close" [icon]="faXmark"></fa-icon>
+                                            <div class="mr-4">{{noti.sendDate | date: 'dd/MM/yyyy HH:mm'}}</div>
                                         </div>
                                     </div>
                                     <!-- Card Body -->
