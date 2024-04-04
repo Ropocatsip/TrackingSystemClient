@@ -4,7 +4,7 @@ export class UserInfo {
     name : string = "";
     lastName : string = "";
     email : string = "";
-    userInfo = {} as User;
+    user = {} as User;
     role: string = "";
 }
 

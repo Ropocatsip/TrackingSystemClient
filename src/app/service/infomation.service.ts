@@ -18,4 +18,8 @@ export class InfomationService {
   getLoginResponse(userName: string, password: string): Observable<UserInfo> {
     return this.http.get<UserInfo>(`http://localhost:5043/Information/${userName}/${password}`);
   }
+
+  getAllUserByRole(role: string): Observable<UserInfo[]> {
+    return this.http.get<UserInfo[]>(`http://localhost:5043/Information/users/${role}`);
+  }
 }

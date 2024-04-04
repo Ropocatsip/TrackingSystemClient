@@ -23,10 +23,10 @@
                                         <div class="col-xl-3">
                                             อาจารย์ที่ปรึกษา
                                         </div>
-                                        <div class="col-xl-9">
-                                            <select id="advisor-lists" class="form-control">
+                                        <div *ngIf="advisors" class="col-xl-9">
+                                            <select [(ngModel)]="advisorUserName" id="advisor-lists" class="form-control">
                                                 <option value="" disabled selected>--- โปรดเลือก ---</option>
-                                                <option *ngFor="let advisors of advisorOption" [value]="advisors.code">{{ advisors.description }}</option>
+                                                <option *ngFor="let advisor of advisors" [value]="advisor.user.userName">{{ advisor.title }} {{ advisor.name }} {{ advisor.lastName }}</option>
                                             </select>
                                         </div>
                                     </div>
@@ -35,11 +35,11 @@
                                             หัวข้อ
                                         </div>
                                         <div class="col-xl-9">
-                                            <input id="thesis-topic" class="form-control" type="text">
+                                            <input [(ngModel)]="topic" id="thesis-topic" class="form-control" type="text" name="topic">
                                         </div>
                                     </div>
                                     <div class="row justify-content-center">
-                                        <a href="#" class="btn btn-success btn-icon-split">
+                                        <a (click)="onClickAdvisorRequest()" class="btn btn-success btn-icon-split">
                                             <span class="text">ส่งคำร้องขอกับอาจารย์ที่ปรึกษา</span>
                                         </a>
                                     </div>
