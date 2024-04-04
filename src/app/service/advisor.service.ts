@@ -20,4 +20,8 @@ export class AdvisorService {
   updateAdvisoryRequest(advisorUserName: string, studentUserName: string, advisoryRequest: AdvisoryRequest): Observable<Advisor> {
     return this.http.put<Advisor>(`http://localhost:5043/Advisor/${advisorUserName}/${studentUserName}`, advisoryRequest);
   }
+
+  advisorUpdateAdvisoryRequest(advisorUserName: string, advisoryRequest: AdvisoryRequest): Observable<any> {
+    return this.http.put<any>(`http://localhost:5043/Advisor/${advisorUserName}`, advisoryRequest);
+  }
 }

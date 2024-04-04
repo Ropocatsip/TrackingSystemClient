@@ -35,10 +35,10 @@
                                         </div>
                                     </div>
                                     <div class="row justify-content-center">
-                                        <a class="btn btn-success btn-icon-split mr-4 col-xl-3">
+                                        <a (click)="onClickConfrim(advisory, true)" class="btn btn-success btn-icon-split mr-4 col-xl-3">
                                             <span class="text">ยืนยันเป็นอาจารย์ที่ปรึกษา</span>
                                         </a>
-                                        <a class="btn btn-danger btn-icon-split col-xl-3">
+                                        <a (click)="onClickConfrim(advisory, false)" class="btn btn-danger btn-icon-split col-xl-3">
                                             <span class="text">ปฏิเสธการเป็นอาจารย์ที่ปรึกษา</span>
                                         </a>
                                     </div>
