@@ -6,6 +6,7 @@ import { InfomationService } from '../service/infomation.service';
 import { UserInfo } from '../models/user-info';
 import { AdvisoryRequest } from '../models/advisory-request';
 import { AdvisorService } from '../service/advisor.service';
+import { Thesis } from '../models/thesis';
 
 @Component({
   selector: 'app-thesis',
@@ -46,11 +47,35 @@ export class ThesisComponent implements OnInit {
   }
 
   onClickAdvisorRequest() {
-    let advisoryRequest = {} as AdvisoryRequest;
-
-    advisoryRequest.thesisTopic = this.topic;
-    advisoryRequest.studentId = this.student.studentId;
+    let advisoryRequest = {
+      thesisTopic:  this.topic,
+      studentId: this.student.studentId
+    } as AdvisoryRequest;
     this.advisorService.updateAdvisoryRequest(this.advisorUserName, this.studentUserName, advisoryRequest).subscribe({
+      next:() => {},
+      error:(err) => {
+        alert(err.error);
+      },
+      complete:() => {
+       this.updateThesis();
+      }
+    });
+  }
+
+  updateThesis() {
+    const advisor = this.advisors.find(s => s.user.userName == this.advisorUserName);
+    let thesis = {
+      status: {
+        statusId : 1,
+        desc : "อยู่ระหว่างพิจารณา"
+      },
+      topic : this.topic,
+      advisorInfo: {
+        fullName: advisor?.title + " " + advisor?.name + " " + advisor?.lastName
+      }
+    } as Thesis;
+
+    this.studentService.updateThesis(this.studentUserName, thesis).subscribe({
       next:() => {},
       error:(err) => {
         alert(err.error);
@@ -59,6 +84,6 @@ export class ThesisComponent implements OnInit {
         this.getStudentInfo(this.studentUserName);
         alert("ส่งคำขอให้อาจารย์ที่ปรึกษาสำเร็จ");
       }
-    })
+    });
   }
 }

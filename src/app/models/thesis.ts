@@ -12,6 +12,5 @@ export class ThesisStatus
 
 export class AdvisorInfo
 {
-    advisorId : number = 0;
     fullName : string = "";
 }

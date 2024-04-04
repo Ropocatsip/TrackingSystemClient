@@ -18,13 +18,13 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Advisor Information</h6>
                                 </div>
                                 <!-- Card Body -->
-                                <div class="card-body">
+                                <div *ngIf="student.thesis" class="card-body">
                                     <div class="row mb-4">
                                         <div class="col-xl-3">
                                             อาจารย์ที่ปรึกษา
                                         </div>
                                         <div *ngIf="advisors" class="col-xl-9">
-                                            <select [(ngModel)]="advisorUserName" id="advisor-lists" class="form-control">
+                                            <select [disabled]="student.thesis.status.statusId != 0" [(ngModel)]="advisorUserName" id="advisor-lists" class="form-control">
                                                 <option value="" disabled selected>--- โปรดเลือก ---</option>
                                                 <option *ngFor="let advisor of advisors" [value]="advisor.user.userName">{{ advisor.title }} {{ advisor.name }} {{ advisor.lastName }}</option>
                                             </select>
@@ -35,13 +35,13 @@
                                             หัวข้อ
                                         </div>
                                         <div class="col-xl-9">
-                                            <input [(ngModel)]="topic" id="thesis-topic" class="form-control" type="text" name="topic">
+                                            <input [disabled]="student.thesis.status.statusId != 0" [(ngModel)]="topic" id="thesis-topic" class="form-control" type="text" name="topic">
                                         </div>
                                     </div>
                                     <div class="row justify-content-center">
-                                        <a (click)="onClickAdvisorRequest()" class="btn btn-success btn-icon-split">
+                                        <button [disabled]="student.thesis.status.statusId != 0" (click)="onClickAdvisorRequest()" class="btn btn-success btn-icon-split">
                                             <span class="text">ส่งคำร้องขอกับอาจารย์ที่ปรึกษา</span>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@
                                         </div>
                                     </div>
 
-                                    <div *ngIf="student.thesis.status.statusId != 1">
+                                    <div *ngIf="student.thesis.status.statusId > 1">
                                         <div class="row mb-4">
                                             <div class="col-xl-3">
                                                 หัวข้อ
