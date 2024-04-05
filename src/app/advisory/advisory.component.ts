@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LocalStorageService } from '../service/local-storage.service';
 import { AdvisorService } from '../service/advisor.service';
 import { AdvisoryRequest } from '../models/advisory-request';
+import { StudentService } from '../service/student.service';
 
 @Component({
   selector: 'app-advisory',
@@ -12,6 +13,7 @@ export class AdvisoryComponent implements OnInit {
 
   advisories = [] as AdvisoryRequest[];
   advisorUserName = "";
+  studentId = "";
 
   constructor(
     private localStorageService: LocalStorageService,
@@ -38,15 +40,17 @@ export class AdvisoryComponent implements OnInit {
   }
 
   onClickConfrim(advisor : AdvisoryRequest, isAccept: boolean) {
+    this.studentId = advisor.studentId;
+
     if (isAccept) {
       advisor.thesisStatus.statusId = 2;
       advisor.thesisStatus.desc = "รอสอบ Proposal ครั้งที่ 1";
-
+      
     } else {
       advisor.thesisStatus.statusId = 0;
       advisor.thesisStatus.desc = "ยังไม่มีที่ปรึกษา";
     }
-    console.log(advisor);
+
     this.advisorService.advisorUpdateAdvisoryRequest(this.advisorUserName, advisor).subscribe({
       next:() => {},
       error:(err) => {
