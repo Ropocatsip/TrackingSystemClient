@@ -2,6 +2,8 @@ export class Thesis {
     status = {} as ThesisStatus;
     topic : string = "";
     advisorInfo = {} as AdvisorInfo;
+    committeeInfo = {} as CommitteeInfo;
+
 }
 
 export class ThesisStatus 
@@ -12,5 +14,11 @@ export class ThesisStatus
 
 export class AdvisorInfo
 {
+    fullName : string = "";
+}
+
+export class CommitteeInfo
+{
+    userName : string = "";
     fullName : string = "";
 }

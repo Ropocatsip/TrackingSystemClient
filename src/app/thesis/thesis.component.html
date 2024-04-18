@@ -83,6 +83,15 @@
                                                 {{student.thesis.advisorInfo.fullName}}
                                             </div>
                                         </div>
+
+                                        <div *ngIf="student.thesis.committeeInfo" class="row mb-4">
+                                            <div class="col-xl-3">
+                                                คณะกรรมการ
+                                            </div>
+                                            <div class="col-xl-9">
+                                                {{student.thesis.committeeInfo.fullName}}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

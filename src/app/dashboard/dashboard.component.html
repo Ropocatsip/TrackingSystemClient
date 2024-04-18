@@ -3,7 +3,87 @@
         <app-slide-bar></app-slide-bar>
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
+                <div class="mt-4 container-fluid">
+
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                    </div>
                 
+                    <!-- Content Row -->
+                
+                    <div class="row">
+                        <!-- Area Chart -->
+                        <div class="col-xl-12 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Personal Information</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <!-- <div *ngIf="userInfo.name" class="card-body">
+                                    <div class="row mb-4">
+                                        <div class="col-xl-3">
+                                            ชื่อ
+                                        </div>
+                                        <div class="col-xl-9">
+                                            {{userInfo.title}} {{userInfo.name}}
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4">
+                                        <div class="col-xl-3">
+                                            นามสกุล
+                                        </div>
+                                        <div class="col-xl-9">
+                                            {{userInfo.lastName}}
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4">
+                                        <div class="col-xl-3">
+                                            Email
+                                        </div>
+                                        <div class="col-xl-9">
+                                            {{userInfo.email}}
+                                        </div>
+                                    </div>
+                                    <div *ngIf="student.studentId">
+                                        <div class="row mb-4">
+                                            <div class="col-xl-3">
+                                                รหัสนิสิต
+                                            </div>
+                                            <div class="col-xl-9">
+                                                {{student.studentId}}
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col-xl-3">
+                                                ภาควิชา
+                                            </div>
+                                            <div class="col-xl-9">
+                                                {{student.course.desc}}
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col-xl-3">
+                                                GPAX
+                                            </div>
+                                            <div class="col-xl-9">
+                                                {{student.gpax}}
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col-xl-3">
+                                                สถานะ
+                                            </div>
+                                            <div class="col-xl-9">
+                                                {{student.status.desc}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <app-footer></app-footer>
         </div>
