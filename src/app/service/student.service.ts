@@ -15,6 +15,10 @@ export class StudentService {
     return this.http.get<Student>(`http://localhost:5043/Student/${userName}`);
   }
 
+  getStudentInfoByCommittee(userName: string): Observable<Student[]> {
+    return this.http.get<Student[]>(`http://localhost:5043/Student/Committee/${userName}`);
+  }
+
   updateThesis(userName: string, thesis: Thesis): Observable<any> {
     return this.http.put<any>(`http://localhost:5043/Student/${userName}`, thesis);
   }

@@ -20,32 +20,32 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Personal Information</h6>
                                 </div>
                                 <!-- Card Body -->
-                                <!-- <div *ngIf="userInfo.name" class="card-body">
-                                    <div class="row mb-4">
-                                        <div class="col-xl-3">
-                                            ชื่อ
+                                <div *ngFor="let student of students; index as i">
+                                    <div class="card-body">
+                                        <div class="row mb-4">
+                                            <div class="col-xl-3">
+                                                หัวข้อ
+                                            </div>
+                                            <div class="col-xl-9">
+                                                {{student.thesis.topic}}
+                                            </div>
                                         </div>
-                                        <div class="col-xl-9">
-                                            {{userInfo.title}} {{userInfo.name}}
+                                        <div class="row mb-4">
+                                            <div class="col-xl-3">
+                                                อาจารย์ที่ปรึกษา
+                                            </div>
+                                            <div class="col-xl-9">
+                                                {{student.thesis.advisorInfo.fullName}}
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-4">
-                                        <div class="col-xl-3">
-                                            นามสกุล
+                                        <div class="row mb-4">
+                                            <div class="col-xl-3">
+                                                ชื่อนิสิต
+                                            </div>
+                                            <div class="col-xl-9">
+                                                {{student.name}} {{student.lastName}}
+                                            </div>
                                         </div>
-                                        <div class="col-xl-9">
-                                            {{userInfo.lastName}}
-                                        </div>
-                                    </div>
-                                    <div class="row mb-4">
-                                        <div class="col-xl-3">
-                                            Email
-                                        </div>
-                                        <div class="col-xl-9">
-                                            {{userInfo.email}}
-                                        </div>
-                                    </div>
-                                    <div *ngIf="student.studentId">
                                         <div class="row mb-4">
                                             <div class="col-xl-3">
                                                 รหัสนิสิต
@@ -56,30 +56,14 @@
                                         </div>
                                         <div class="row mb-4">
                                             <div class="col-xl-3">
-                                                ภาควิชา
-                                            </div>
-                                            <div class="col-xl-9">
-                                                {{student.course.desc}}
-                                            </div>
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="col-xl-3">
-                                                GPAX
-                                            </div>
-                                            <div class="col-xl-9">
-                                                {{student.gpax}}
-                                            </div>
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="col-xl-3">
                                                 สถานะ
                                             </div>
                                             <div class="col-xl-9">
-                                                {{student.status.desc}}
+                                                {{student.thesis.status.desc}}
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
