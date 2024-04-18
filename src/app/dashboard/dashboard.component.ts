@@ -28,8 +28,6 @@ export class DashboardComponent implements OnInit {
     if (userName) { 
       this.studentService.getStudentInfoByCommittee(userName).subscribe(s => {
         this.students = s;
-        console.log(this.students);
-        
       });
     }
   }

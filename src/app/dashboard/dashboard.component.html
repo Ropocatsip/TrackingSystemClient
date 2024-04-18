@@ -17,7 +17,7 @@
                             <div class="card shadow mb-4">
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Personal Information</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Thesis Information</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div *ngFor="let student of students; index as i">
@@ -36,14 +36,6 @@
                                             </div>
                                             <div class="col-xl-9">
                                                 {{student.thesis.advisorInfo.fullName}}
-                                            </div>
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="col-xl-3">
-                                                ชื่อนิสิต
-                                            </div>
-                                            <div class="col-xl-9">
-                                                {{student.name}} {{student.lastName}}
                                             </div>
                                         </div>
                                         <div class="row mb-4">
