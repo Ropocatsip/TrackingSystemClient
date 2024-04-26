@@ -10,6 +10,7 @@ export class ThesisStatus
 {
     statusId : number = 0;
     desc : string = "";
+    appointmentDate: string = "";
 }
 
 export class AdvisorInfo
