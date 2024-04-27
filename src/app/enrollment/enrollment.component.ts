@@ -20,7 +20,7 @@ export class EnrollmentComponent implements OnInit{
   ngOnInit(): void {
     const userName = this.localStorageService.getItem('userName');
     if (userName) {
-      this.studentService.getStudentInfo("student").subscribe(s => {
+      this.studentService.getStudentInfo(userName).subscribe(s => {
         this.studentInfo = s
       });
     }
